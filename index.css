@@ -1,0 +1,107 @@
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Outfit:wght@400;700&family=Red+Hat+Display:wght@500;700;900&family=Work+Sans:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background: url(pattern-background-desktop.svg),var(--Pale-blue);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    border-radius: .625rem;
+    background-color: #fff;
+    text-align: center;
+    gap: 1rem;
+    padding-bottom: 0.8rem;
+}
+main h1,h4{
+    color: var(--Dark-blue);
+}
+main > img{
+    border-radius: .625rem .625rem 0 0;
+}
+section{
+    padding: 1rem 1.5rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+section p{
+    font-size: .8rem;
+    font-weight: bold;
+    color: var(--Desaturated-blue);
+}
+section > p{
+    font-weight: 500;
+    font-size: .9rem;
+}
+section .plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--Very-pale-blue);
+    padding: 1rem;
+    border-radius: 0.7rem;
+    align-items: center;
+}
+.plan .plan-details{
+    margin-left: -2rem;
+}
+.plan a{
+    color: var(--Bright-blue);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.plan a:hover{
+    text-decoration: none;
+    transform: translateY(4px);
+}
+section button{
+    background-color: var(--Bright-blue);
+    outline: 0;
+    border: 0;
+    padding: .9rem;
+    border-radius: .625rem;
+    color: #fff;
+}
+button:hover{
+    cursor: pointer;
+}
+.cancel:hover{
+    transform: translateY(4px);
+    color: var(--Dark-blue);
+    cursor: pointer;
+}
+.attribution{ 
+    font-size: .7rem; text-align: center; 
+    margin-top: 2rem;
+}
+.attribution a {
+    color: var(--Bright-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 500px){
+    body{
+        background-image: url(pattern-background-mobile.svg),var(--Pale-blue);
+    }
+}
